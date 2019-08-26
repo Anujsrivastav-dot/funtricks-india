@@ -1,0 +1,160 @@
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+   .form-control { width: auto;}
+   label {
+     font-weight: bolder;
+     font-size: 22px;
+   }
+   .background { background-color :aquamarine;
+   
+   
+
+   }
+    </style>
+      
+  </head>
+  <body>
+    <div class="background">
+    
+        <div class="row" style="margin-left:10px;border: 6px black;">
+            <div class="col-md-3">
+   
+    <form action="/insert" method="post" style="position: absolute;background: none;padding: 50px;">
+        <h1 style="font-style: italic;">Insert data into record</h1>
+        <div class="form-group">
+      
+      <label for="firstname">Firstname</label>
+      <input type="text" id="firstname"  class="form-control" placeholder="Enter firstname here" name="firstname">
+      </div>
+      
+      <div class="form-group">
+      <label for="lastname" style="">Lastname</label>
+      <input type="text" id="lastname" class="form-control" placeholder="Enter lastname here" name="lastname">
+      </div>
+      
+      <div class="form-group">
+            <label for="profile">Profile</label>
+            <br>
+            <input type="text" id="profile"  class="form-control" placeholder="Enter your profile here" name="profile">
+      </div>
+          
+      
+      
+      <button type="submit" class="btn btn-primary btn-lg" style="margin-left:px;">insert data</button>
+      
+
+    </form>
+    </div>
+    </div>
+    
+
+    
+<div class="row" style="margin-left: 550px;">
+    <div class="col-md-3">
+
+<form action="/update" method="post" style="position: absolute;background: greenyellow;padding: 50px;">
+    <h1 style="font-style: italic;">Update data</h1>
+  
+
+  <div class="form-group">
+  
+  <label for="id">Id</label>
+  
+  <input type="text" id="id" class="form-control" placeholder="Enter your Id" name="id">
+  
+  </div>
+  <div class="form-group">
+  <label for="firstname">Firstname</label>
+  <input type="text" id="firstname" class="form-control" placeholder="Enter Firstname here"  name="firstname">
+  </div>
+  <div class="form-group">
+  <label for="lastname">Lastname</label>
+  <input type="text" id="lastname" class="form-control" placeholder="Enter lastname here" name="lastname">
+  </div>
+  <div class="form-group">
+  <label for="profile">Profile</label>
+  <input type="text" id="profile" class="form-control" placeholder="Enter your profile" name="profile">
+  </div>
+  
+  <button type="submit" class="btn btn-success btn-lg">update data</button>
+  <br>
+  </form>
+  </div>
+  </div>
+  
+  
+  <div>
+    
+    
+    
+  
+    
+  
+  </div>
+  <div class="row" style="margin-left: 990px;">
+  <div class="col-md-3" >
+  <form action="/login" method="post" style="position: absolute;background: blueviolet;border:3px black;padding: 50px;margin-top: 10px;">
+    <h1 style="font-style: italic; ">Login form</h1>
+    <div class="form-group">
+      
+    <label for="firstname">Firstname</label>
+    <input type="text" id="firstname"class="form-control" placeholder="Enter first name" name="firstname">
+    </div>
+    <div class="form-group">
+      
+            <label for="lastname">Lastname</label>
+            <input type="text" id="firstname" class="form-control" placeholder="Enter last name" name="lastname">
+            </div>
+    <button type="submit" class="btn btn-warning btn-lg">Login</button>
+    </form>
+    </div>
+    <div class="col-md-3">
+        <form action="/delete" method="post" style="position: absolute;background: red;border:3px black;padding: 40px;margin-top: 10px;margin-left:150px;">
+          <h1 style="font-style: italic; ">Delete Data</h1>
+          <div class="form-group">
+            
+          <label for="id">id</label>
+          <input type="text" id="id"class="form-control" placeholder="Enter your id" name="id">
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg">Delete id</button>
+
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+  
+  <div class="container">
+  <div class="row" style="position: absolute;margin-top:730px;background-color: darkblue;margin-left: -210px;">
+    <div class="col-md-4">
+      <h1>Get Data</h1>
+      <a href="/getdata">Get Data</a>
+      <div>
+        {{# each items }}
+        <article class="item">
+          {{this.firstname}}
+          {{this.lastname}}
+          {{this.profile}}
+
+        </article>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </body>
+  </html>
+  
